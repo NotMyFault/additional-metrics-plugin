@@ -1,5 +1,5 @@
 if (env.JENKINS_URL == 'https://ci.jenkins.io/') {
-    buildPlugin()
+    buildPlugin(findbugs: [archive: true, unstableTotalAll: '0'], checkstyle: [run: true, archive: true])
 } else {
     node {
         echo "hello"
